@@ -10,9 +10,6 @@ import aProposScreen from "./app/screens/aProposScreen";
 import MentionLegaleScreen from "./app/screens/MentionLegaleScreen";
 import ObetnirAideScreen from "./app/screens/ObtenirAideScreen";
 
-
-
-
 const Drawer = createDrawerNavigator();
 
 export default function App() {
