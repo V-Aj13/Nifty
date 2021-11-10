@@ -53,7 +53,7 @@ function ProduitScreen(props) {
 
 export default ProduitScreen;
 
-//partie CSS pour chaque produit
+//Trouver une methode comment appliquer CSS avec FlatList
 const styles = StyleSheet.create({
   produitContainer: {
     position: "absolute",
