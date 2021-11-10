@@ -12,6 +12,7 @@ import ObetnirAideScreen from "./app/screens/ObtenirAideScreen";
 
 const Drawer = createDrawerNavigator();
 
+//Bar 
 export default function App() {
   return (
     <NavigationContainer>
