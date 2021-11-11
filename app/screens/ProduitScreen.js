@@ -1,7 +1,6 @@
 import React from "react";
 import { ScrollView, Image, StyleSheet } from "react-native";
 
-fazefefe
 function ProduitScreen(props) {
   return (
     //remplacer avec FlatList
