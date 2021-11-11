@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, Image, StyleSheet } from "react-native";
 
+fazefefe
 function ProduitScreen(props) {
   return (
     //remplacer avec FlatList
@@ -53,7 +54,7 @@ function ProduitScreen(props) {
 
 export default ProduitScreen;
 
-//Trouver une methode comment appliquer CSS avec FlatList
+//Trouver une methode comment appliquer CSS avec FlatList 
 const styles = StyleSheet.create({
   produitContainer: {
     position: "absolute",
