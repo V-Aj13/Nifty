@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.678" height="34.678" viewBox="0 0 34.678 34.678">
+  <g id="Groupe_2" data-name="Groupe 2" transform="translate(-853.454 -61.443)">
+    <path id="Rectangle_3" data-name="Rectangle 3" d="M11.26,0h0a11.26,11.26,0,0,1,11.26,11.26v11.26a0,0,0,0,1,0,0H11.26A11.26,11.26,0,0,1,0,11.26v0A11.26,11.26,0,0,1,11.26,0Z" transform="translate(870.793 62.857) rotate(45)" fill="#fff"/>
+    <path id="Rectangle_3_-_Contour" data-name="Rectangle 3 - Contour" d="M11.26-1a12.26,12.26,0,0,1,12.26,12.26v12.26H11.26A12.26,12.26,0,0,1-1,11.26,12.26,12.26,0,0,1,11.26-1Zm10.26,22.521V11.26a10.26,10.26,0,1,0-10.26,10.26Z" transform="translate(870.793 62.857) rotate(45)" fill="#133483"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="4.759" cy="4.759" r="4.759" transform="translate(866.034 73.331)" fill="#fff"/>
+    <path id="Ellipse_6_-_Contour" data-name="Ellipse 6 - Contour" d="M4.759-1A5.759,5.759,0,1,1-1,4.759,5.765,5.765,0,0,1,4.759-1Zm0,9.518A3.759,3.759,0,1,0,1,4.759,3.763,3.763,0,0,0,4.759,8.518Z" transform="translate(866.034 73.331)" fill="#133483"/>
+  </g>
+</svg>
