@@ -1,7 +1,6 @@
 //Bar en bas de l'application
 import * as React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import DistributeurScreen from "./DistributeurScreen";
 import ProduitScreen from "./ProduitScreen";
@@ -18,7 +17,7 @@ function MesOnglets() {
           tabBarLabel: "Distributeurs",
           tabBarColor: "#fff",
           tabBarIcon: ({ color }) => (
-            <Image source={require("../icones/Icone Map.svg")}></Image>
+            <Image source={require("../icones/Icone Map.svg")} />
           ),
         }}
       />
@@ -28,7 +27,7 @@ function MesOnglets() {
         options={{
           tabBarLabel: "Produits",
           tabBarIcon: ({ color }) => (
-            <Image source={require("../icones/Icone boutique.svg")}></Image>
+            <Image source={require("../icones/Icone boutique.svg")} />
           ),
         }}
       />
