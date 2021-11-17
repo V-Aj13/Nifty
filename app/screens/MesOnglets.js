@@ -18,11 +18,7 @@ function MesOnglets() {
           tabBarLabel: "Distributeurs",
           tabBarColor: "#fff",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="map-marker-outline"
-              color={color}
-              size={26}
-            />
+            <Image source={require("../icones/Icone Map.svg")}></Image>
           ),
         }}
       />
@@ -32,11 +28,7 @@ function MesOnglets() {
         options={{
           tabBarLabel: "Produits",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="shopping-outline"
-              color={color}
-              size={26}
-            />
+            <Image source={require("../icones/Icone boutique.svg")}></Image>
           ),
         }}
       />
