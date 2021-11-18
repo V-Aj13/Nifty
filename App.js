@@ -12,7 +12,7 @@ import ObetnirAideScreen from "./app/screens/ObtenirAideScreen";
 
 const Drawer = createDrawerNavigator();
 
-//Bar 
+//Bar
 export default function App() {
   return (
     <NavigationContainer>
@@ -22,7 +22,10 @@ export default function App() {
         <Drawer.Screen name="Paramètres" component={ParametreScreen} />
         <Drawer.Screen name="À Propos" component={aProposScreen} />
         <Drawer.Screen name="Mention Légales" component={MentionLegaleScreen} />
-        <Drawer.Screen name="Obetenir de l'Aide" component={ObetnirAideScreen} />
+        <Drawer.Screen
+          name="Obetenir de l'Aide"
+          component={ObetnirAideScreen}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );

@@ -1,9 +1,11 @@
 //Bar en bas de l'application
 import * as React from "react";
+import { Image } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
 import DistributeurScreen from "./DistributeurScreen";
 import ProduitScreen from "./ProduitScreen";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -17,7 +19,10 @@ function MesOnglets() {
           tabBarLabel: "Distributeurs",
           tabBarColor: "#fff",
           tabBarIcon: ({ color }) => (
-            <Image source={require("../icones/Icone Map.svg")} />
+            <Image
+              source={require("../icones/Icone Map.svg")}
+              style={{ width: 26, height: 26, tintColor: color }}
+            />
           ),
         }}
       />
@@ -26,8 +31,11 @@ function MesOnglets() {
         component={ProduitScreen}
         options={{
           tabBarLabel: "Produits",
-          tabBarIcon: ({ color }) => (
-            <Image source={require("../icones/Icone boutique.svg")} />
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require("../icones/Icone boutique.svg")}
+              style={{ width: 26, height: 26, tintColor: color }}
+            />
           ),
         }}
       />
