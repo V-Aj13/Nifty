@@ -1,5 +1,4 @@
 //Bar en bas de l'application
-import * as React from "react";
 import { Image } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
