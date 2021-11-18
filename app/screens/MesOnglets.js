@@ -5,19 +5,23 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 
 import DistributeurScreen from "./DistributeurScreen";
 import ProduitScreen from "./ProduitScreen";
-import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createMaterialBottomTabNavigator();
 
 function MesOnglets() {
   return (
-    <Tab.Navigator initialRouteName="Feed" activeColor="#9666a8">
+    <Tab.Navigator 
+    initialRouteName="Home" 
+    activeColor="#9666a8"
+    inactiveColor="#fff"
+    barStyle={{backgroundColor: "#fff"}}
+    >
       <Tab.Screen
         name="Distributeurs"
         component={DistributeurScreen}
         options={{
           tabBarLabel: "Distributeurs",
-          tabBarColor: "#fff",
+          
           tabBarIcon: ({ color }) => (
             <Image
               source={require("../icones/Icone Map.svg")}
@@ -31,7 +35,9 @@ function MesOnglets() {
         component={ProduitScreen}
         options={{
           tabBarLabel: "Produits",
-          tabBarIcon: ({ color, size }) => (
+          activeColor: "9666a8",
+          inactiveColor: "#0000FF",
+          tabBarIcon: ({ color }) => (
             <Image
               source={require("../icones/Icone boutique.svg")}
               style={{ width: 26, height: 26, tintColor: color }}
