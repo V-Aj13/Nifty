@@ -1,4 +1,5 @@
 //Bar en bas de l'application
+import React from 'react';
 import { Image } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
@@ -37,10 +38,9 @@ function MesOnglets() {
           activeColor: "9666a8",
           inactiveColor: "#0000FF",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="shopping-outline"
-              color={color}
-              size={26}
+            <Image
+              source={require("../icones/Icone boutique.svg")}
+              style={{ width: 20, height: 20, tintColor: color }}
             />
           ),
         }}
