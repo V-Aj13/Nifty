@@ -40,7 +40,7 @@ function MesOnglets() {
           tabBarIcon: ({ color }) => (
             <Image
               source={require("../icones/Icone boutique.svg")}
-              style={{ width: 26, height: 26, tintColor: color }}
+              style={{ width: 20, height: 20, tintColor: color }}
             />
           ),
         }}
