@@ -37,9 +37,10 @@ function MesOnglets() {
           activeColor: "9666a8",
           inactiveColor: "#0000FF",
           tabBarIcon: ({ color }) => (
-            <Image
-              source={require("../icones/Icone boutique.svg")}
-              style={{ width: 20, height: 20, tintColor: color }}
+            <MaterialCommunityIcons
+              name="shopping-outline"
+              color={color}
+              size={26}
             />
           ),
         }}
