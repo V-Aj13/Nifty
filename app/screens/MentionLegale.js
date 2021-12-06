@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function MentionLegaleScreen(props) {
+function MentionLegale(props) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text>Mention Légales</Text>
@@ -9,4 +9,4 @@ function MentionLegaleScreen(props) {
       );
 }
 
-export default MentionLegaleScreen;
+export default MentionLegale;

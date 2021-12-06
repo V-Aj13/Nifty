@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function aProposScreen(props) {
+function aPropos(props) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text>On s'amuse beaucoup ici !! </Text>
@@ -9,4 +9,4 @@ function aProposScreen(props) {
       );
 }
 
-export default aProposScreen;
+export default aPropos;

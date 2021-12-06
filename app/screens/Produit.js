@@ -1,83 +1,71 @@
 import React from "react";
 import { ScrollView, Image, StyleSheet } from "react-native";
+import { images } from "../constants";
 
-function ProduitScreen(props) {
+function Produit(props) {
   return (
     //remplacer avec FlatList
     <ScrollView style={styles.produitContainer}>
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.alwaysMaxi}
-        source={require("../images/alwaysMaxi.png")}
+        source={images.alwaysMaxi}
       />
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.chewingGum}
-        source={require("../images/chewingGum.png")}
+        source={images.chewingGum}
       />
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.Labello}
-        source={require("../images/Labello.png")}
+        source={images.Labello}
       />
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.lingettesEvoluderm}
-        source={require("../images/lingettesEvoluderm.png")}
+        source={images.lingettesEvoluderm}
       />
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.matinBlanc}
-        source={require("../images/matinBlanc.png")}
+        source={images.matinBlanc}
       />
-       <Image
+      <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.niveaAntiRespirant}
-        source={require("../images/niveaAntiRespirant.png")}
+        source={images.niveaAntiRespirant}
       />
       <Image
         resizeMode="contain"
         resizeMethod="resize"
         styles={styles.niveaLotion}
-        source={require("../images/niveaLotion.png")}
+        source={images.niveaLotion}
       />
     </ScrollView>
   );
 }
 
-export default ProduitScreen;
+export default Produit;
 
-//Trouver une methode comment appliquer CSS avec FlatList 
+//Trouver une methode comment appliquer CSS avec FlatList
 const styles = StyleSheet.create({
   produitContainer: {
     position: "absolute",
   },
-  alwaysMaxi: {
-
-  },
-  chewingGum: {
-
-  },
-  Labello: {
-
-  },
-  lingettesEvoluderm: {
-
-  },
-  matinBlanc: {
-
-  },
-  niveaAntiRespirant: {
-
-  }, 
+  alwaysMaxi: {},
+  chewingGum: {},
+  Labello: {},
+  lingettesEvoluderm: {},
+  matinBlanc: {},
+  niveaAntiRespirant: {},
   niveaLotion: {
     position: "absolute",
-    
   },
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function ParametreScreen(props) {
+function Parametre(props) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text>Settings</Text>
@@ -9,4 +9,4 @@ function ParametreScreen(props) {
       );
 }
 
-export default ParametreScreen;
+export default Parametre;

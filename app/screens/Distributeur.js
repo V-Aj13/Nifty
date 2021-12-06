@@ -1,12 +1,13 @@
+//Faire la map sur ce fichier
 import React from "react";
 import { View, Text } from "react-native";
 
-function ObtenirAideScreen(props) {
+function Distributeur(props) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>À L'AIDE LE DUT C'EST MORT</Text>
+      <Text>UNE MAP!</Text>
     </View>
   );
 }
 
-export default ObtenirAideScreen;
+export default Distributeur;
