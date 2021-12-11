@@ -1,17 +1,11 @@
 import React from "react";
-import {
-  FlatList,
-  SafeAreaView,
-  View,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { FlatList, View, Text, TouchableOpacity } from "react-native";
 
 import { PRODUITS } from "../constants";
 
 function Produit(props) {
   return (
-    <SafeAreaView>
+    <View>
       <FlatList
         data={PRODUITS}
         numColumns={2}
@@ -32,7 +26,7 @@ function Produit(props) {
           </View>
         )}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
