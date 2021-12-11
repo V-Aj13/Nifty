@@ -1,10 +1,5 @@
 import React from "react";
-import { 
-    View, 
-    Text, 
-    Image, 
-    TouchableOpacity 
-} from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import Animated from "react-native-reanimated";
 import {
   createDrawerNavigator,
@@ -12,177 +7,176 @@ import {
 } from "@react-navigation/drawer";
 
 import { MainStackNavigator } from "./stackTab";
-import aPropos from "../screens/aPropos"
+import aPropos from "../screens/aPropos";
 import Information from "../screens/Information";
 import MentionLegale from "../screens/MentionLegale";
 import ObtenirAide from "../screens/ObtenirAide";
 import Parametre from "../screens/Parametre";
-import { COLORS, FONTS, icons, SIZES, } from "../constants/";
-import constants from "../constants/constants";
-
+import { COLORS, FONTS, icons, SIZES, constants } from "../constants";
 
 const Drawer = createDrawerNavigator();
 
-const CustomDrawerItem = ({label}) => {
-    return( 
-        <TouchableOpacity
-        styles={{
-            flexDirection:'raw',
-            height: 40,
-            marginBottom: SIZES.base,
-            alignItems: 'center',
-            paddingLeft: SIZES.radiusDrawer,
-            borderRadius: SIZES.base,
-            //backgroundColor
+const CustomDrawerItem = ({ label }) => {
+  return (
+    <TouchableOpacity
+      styles={{
+        flexDirection: "row",
+        height: 40,
+        marginBottom: SIZES.base,
+        alignItems: "center",
+        paddingLeft: SIZES.radiusDrawer,
+        borderRadius: SIZES.base,
+        //backgroundColor
+      }}
+      //onPress
+    >
+      <Image
+        source={icons}
+        style={{
+          width: 20,
+          height: 20,
+          tintColor: COLORS.primary,
         }}
-        //onPress
+      />
+      <Text
+        styles={{
+          marginLeft: 15,
+          color: COLORS.black,
+          ...FONTS.h3,
+        }}
+      />
+    </TouchableOpacity>
+  );
+};
+
+const CustomDrawerContent = ({ navigation }) => {
+  return (
+    <DrawerContentScrollView
+      scrollEnabled={true}
+      contentContainerStyle={{ flex: 1 }}
+    >
+      <View
+        style={{
+          flex: 1,
+          paddingHorizontal: SIZES.radiusDrawer,
+        }}
+      >
+        {/*retour boutton */}
+        <View
+          style={{
+            alignItems: "flex-start",
+            justifyContent: "center",
+          }}
         >
+          <TouchableOpacity
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onPress={() => navigation.closeDrawer()}
+          >
             <Image
-            source={icons}
-            style={{
-                width: 20,
-                height: 20,
+              resizeMode="contain"
+              source={icons.retour}
+              style={{
+                height: 15,
+                width: 15,
                 tintColor: COLORS.primary,
-            }}
+              }}
             />
-            <Text
-            styles ={{
-                marginLeft: 15,
-                color: COLORS.black,
-                ...FONTS.h3
-            }}
-            />
-        </TouchableOpacity>
-    )
-}
+          </TouchableOpacity>
+        </View>
 
-const CustomDrawerContent = ({navigation}) => {
-    return (
-        <DrawerContentScrollView
-        scrollEnabled={true}
-        contentContainerStyle={{ flex: 1 }}
+        {/*Dans le cas de Profile utilisateur*/}
+
+        {/*Drawer items*/}
+        <View
+          style={{
+            flex: 1,
+            marginTop: SIZES.paddingDrawer,
+          }}
         >
-            <View
-            style={{
-                flex: 1,
-                paddingHorizontal: SIZES.radiusDrawer
-            }}
-            >
-                {/*retour boutton */ }
-                <View
-                style={{
-                    alignItems: 'flex-start',
-                    justifyContent: "center",
-                }}
-                >
-                    <TouchableOpacity 
-                    style={{
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                    onPress={()=> navigation.closeDrawer()}
-                    >
-                        <Image
-                        source={icons.retour}
-                        style={{
-                            height: 15,
-                            width: 15,
-                            tintColor: COLORS.primary
-                        }}
-                        />
-                    </TouchableOpacity>
-                </View>
-
-                {/*Dans le cas de Profile utilisateur*/}
-
-                {/*Drawer items*/}
-                <View
-                style={{
-                    flex: 1,
-                    marginTop: SIZES.paddingDrawer
-
-                }}
-                >
-                    <CustomDrawerItem
-                    label={constants.screens.accueil}
-                    //icon={icons.home}
-                    />
-                    <CustomDrawerItem
-                    label={constants.screens.aPropos}
-                    //icon={icons.home}
-                    />
-                    <CustomDrawerItem
-                    label={constants.screens.information}
-                    //icon={icons.home}
-                    />
-                    <CustomDrawerItem
-                    label={constants.screens.mentionLegale}
-                    //icon={icons.home}
-                    />
-                    <CustomDrawerItem
-                    label={constants.screens.obtenirAide}
-                    //icon={icons.home}
-                    />
-                    <CustomDrawerItem
-                    label={constants.screens.parametre}
-                    //icon={icons.home}
-                    />
-                </View>
-            </View>
-        </DrawerContentScrollView>
-    )
-}
+          <CustomDrawerItem
+            label={constants.screens.accueil}
+            //icon={icons.home}
+          />
+          <CustomDrawerItem
+            label={constants.screens.aPropos}
+            //icon={icons.home}
+          />
+          <CustomDrawerItem
+            label={constants.screens.information}
+            //icon={icons.home}
+          />
+          <CustomDrawerItem
+            label={constants.screens.mentionLegale}
+            //icon={icons.home}
+          />
+          <CustomDrawerItem
+            label={constants.screens.obtenirAide}
+            //icon={icons.home}
+          />
+          <CustomDrawerItem
+            label={constants.screens.parametre}
+            //icon={icons.home}
+          />
+        </View>
+      </View>
+    </DrawerContentScrollView>
+  );
+};
 
 const CustomDrawer = () => {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: COLORS.black,
+        backgroundColor: COLORS.white,
       }}
-      >
-        <Drawer.Navigator
+    >
+      <Drawer.Navigator
         drawerType="slide"
         overlayColor="transparent"
         drawerStyle={{
-            flex: 1,
-            width: '65%',
-            paddingRight: 20,
-            backgroundColor: 'transparent'
+          flex: 1,
+          width: "65%",
+          paddingRight: 20,
+          backgroundColor: "transparent",
         }}
         sceneContainerStyle={{
-            backgroundColor:'transparent'
+          backgroundColor: "transparent",
         }}
         initaleRouteName="Accueil"
-        drawerContent={props =>{
-            return (
-                <CustomDrawerContent
-                    navigation={props.navigation}
-                />
-            )
+        drawerContent={(props) => {
+          return <CustomDrawerContent navigation={props.navigation} />;
         }}
-        >
-            <Drawer.Screen name ="Accueil">
-                {props => <MainStackNavigator{...props}/>}
-            </Drawer.Screen>
-            <Drawer.Screen name ="aPropos">
-                {props => <aPropos{...props}/>}
-            </Drawer.Screen>
-            <Drawer.Screen name ="Information">
-                {props => <Information{...props}/>}
-            </Drawer.Screen>
-            <Drawer.Screen name ="Mention Legale">
-                {props => <MentionLegale{...props}/>}
-            </Drawer.Screen>
-            <Drawer.Screen name ="Obetenir Aide">
-                {props => <ObtenirAide{...props}/>}
-            </Drawer.Screen>
-            <Drawer.Screen name ="Paramètre">
-                {props => <Parametre{...props}/>}
-            </Drawer.Screen>
-        </Drawer.Navigator>
+      >
+        <Drawer.Screen name="Accueil">
+          {(props) => <MainStackNavigator {...props} />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="aPropos">
+          {(props) => <aPropos {...props} />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Information">
+          {(props) => <Information {...props} />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Mention Legale">
+          {(props) => <MentionLegale {...props} />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Obetenir Aide">
+          {(props) => <ObtenirAide {...props} />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Paramètre">
+          {(props) => <Parametre {...props} />}
+        </Drawer.Screen>
+      </Drawer.Navigator>
     </View>
   );
 };
 
-export default  CustomDrawer;
+export default CustomDrawer;
