@@ -5,6 +5,7 @@ import Tabs from "./tabs";
 import Distributeur from "../screens/Distributeur";
 import Produit from "../screens/Produit";
 
+
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {

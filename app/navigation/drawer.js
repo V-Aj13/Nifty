@@ -12,7 +12,7 @@ import Information from "../screens/Information";
 import MentionLegale from "../screens/MentionLegale";
 import ObtenirAide from "../screens/ObtenirAide";
 import Parametre from "../screens/Parametre";
-import { COLORS, FONTS, icons, SIZES, constants } from "../constants";
+import { COLORS, FONTS, icons, SIZES, screens } from "../constants";
 
 const Drawer = createDrawerNavigator();
 
@@ -97,27 +97,27 @@ const CustomDrawerContent = ({ navigation }) => {
           }}
         >
           <CustomDrawerItem
-            label={constants.screens.accueil}
+            label={screens.accueil}
             //icon={icons.home}
           />
           <CustomDrawerItem
-            label={constants.screens.aPropos}
+            label={screens.aPropos}
             //icon={icons.home}
           />
           <CustomDrawerItem
-            label={constants.screens.information}
+            label={screens.information}
             //icon={icons.home}
           />
           <CustomDrawerItem
-            label={constants.screens.mentionLegale}
+            label={screens.mentionLegale}
             //icon={icons.home}
           />
           <CustomDrawerItem
-            label={constants.screens.obtenirAide}
+            label={screens.obtenirAide}
             //icon={icons.home}
           />
           <CustomDrawerItem
-            label={constants.screens.parametre}
+            label={screens.parametre}
             //icon={icons.home}
           />
         </View>
@@ -131,7 +131,7 @@ const CustomDrawer = () => {
     <View
       style={{
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.primary,
       }}
     >
       <Drawer.Navigator

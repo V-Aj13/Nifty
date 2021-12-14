@@ -7,4 +7,4 @@ const screens = {
   parametre: "Parametre",
 };
 
-export default { screens };
+export  { screens };

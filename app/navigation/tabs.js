@@ -7,6 +7,8 @@ import Svg, { Path } from "react-native-svg";
 import Distributeur from "../screens/Distributeur";
 import Produit from "../screens/Produit";
 
+
+
 import { COLORS, icons } from "../constants";
 
 const Tab = createBottomTabNavigator();
