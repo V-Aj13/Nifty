@@ -1,17 +1,22 @@
 import React from "react";
-import { FlatList, View, Text, StyleSheet } from "react-native";
+import { 
+  FlatList, 
+  View, 
+  Text, 
+  StyleSheet, 
+  Image } from "react-native";
 
 import { PRODUITS } from "../constants";
 
 const Item = ({ title, prodImage, prix }) => (
   <View style={styles.container}>
-    <Text style={styles.title}>{title}</Text>
-    <Image
+     <Image
       resizeMode="contain"
-      resizeMethod="resize"
       source={{ prodImage }}
       style={styles.logo}
     />
+    <Text style={styles.title}>{title}</Text>
+   
     <Text>{prix}</Text>
   </View>
 );
