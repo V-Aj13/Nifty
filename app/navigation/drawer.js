@@ -96,12 +96,14 @@ const CustomDrawerContent = ({ navigation }) => {
             marginTop: SIZES.paddingDrawer,
           }}
         >
+          
           <CustomDrawerItem
             label={screens.accueil}
             //icon={icons.home}
           />
           <CustomDrawerItem
             label={screens.aPropos}
+
             //icon={icons.home}
           />
           <CustomDrawerItem
@@ -120,6 +122,7 @@ const CustomDrawerContent = ({ navigation }) => {
             label={screens.parametre}
             //icon={icons.home}
           />
+         
         </View>
       </View>
     </DrawerContentScrollView>

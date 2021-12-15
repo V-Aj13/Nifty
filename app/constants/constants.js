@@ -4,7 +4,7 @@ const screens = {
   information: "Information",
   mentionLegale: "Mention Legale",
   obtenirAide: "Obtenir Aide",
-  parametre: "Parametre",
+  parametre: "Parametre", 
 };
 
 export  { screens };

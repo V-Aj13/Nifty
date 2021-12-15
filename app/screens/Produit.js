@@ -12,8 +12,11 @@ const Item = ({ title, prodImage, prix }) => (
   <View style={styles.container}>
      <Image
       resizeMode="contain"
-      source={{ prodImage }}
-      style={styles.logo}
+      source={{ uri: prodImage }}
+      style={{
+        width: 200,
+        height: 200
+      }}
     />
     <Text style={styles.title}>{title}</Text>
    
@@ -26,13 +29,16 @@ export default function Produit(props) {
     <Item title={item.title} prodImage={item.prodImage} prix={item.prix} />
   );
   return (
-    <View>
+    <View style={{flex: 1}}>
       <FlatList
         data={PRODUITS}
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        contentContainerStyle={{
+          flexGrow:1,
+        }}
       />
     </View>
   );
