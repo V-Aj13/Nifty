@@ -2,15 +2,16 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import CustomDrawer from "./app/navigation/drawer";
+import DrawerNav from "./navigation/Drawer";
 
 const Stack = createStackNavigator();
 
-//Bar
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
-      <CustomDrawer />
+      <DrawerNav />
     </NavigationContainer>
   );
 }
+
+export default App;
