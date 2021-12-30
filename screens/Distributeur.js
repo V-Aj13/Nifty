@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
+import Map from '../components/Map'
 
 function Distributeur(props) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Map</Text>
-    </View>
+    <SafeAreaView forceInset={{ top: 'always' }}>
+      <Map />
+    </SafeAreaView>
   );
 }
 

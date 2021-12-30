@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
     color: "#6585B7",
     fontSize: 16,
     fontFamily: "HKGrotesk",
-    fontWeight: "medium",
+    fontWeight: "normal",
     alignItems: "left",
-    justifyContent: "left",
+    justifyContent: "flex-end",
   },
   title: {
     color: "#003588",
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: "HKGrotesk",
     fontWeight: "bold",
     alignItems: "left",
-    justifyContent: "left",
+    justifyContent: "flex-end",
   },
   prix: {
     color: "#003588",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     fontFamily: "HKGrotesk",
     fontWeight: "bold",
     alignItems: "left",
-    justifyContent: "left",
+    justifyContent: "flex-end",
   },
   container: {
     flex: 1,
