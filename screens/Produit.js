@@ -1,66 +1,4 @@
-import React from "react";
-import { 
-  FlatList, 
-  View, 
-  Text, 
-  StyleSheet, 
-  Image } from "react-native";
-
-import { PRODUITS } from "../data/listProduit";
-
-const Item = ({ title, prodImage, prix }) => (
-  <View style={styles.container}>
-     <Image
-      resizeMode="contain"
-      source={{ uri: prodImage }}
-      style={{
-        width: 200,
-        height: 200
-      }}
-    />
-    <Text style={styles.title}>{title}</Text>
-   
-    <Text>{prix}</Text>
-  </View>
-);
-
-export default function Produit(props) {
-  const renderItem = ({ item }) => (
-    <Item title={item.title} prodImage={item.prodImage} prix={item.prix} />
-  );
-  return (
-    <View style={{flex: 1}}>
-      <FlatList
-        data={PRODUITS}
-        numColumns={2}
-        columnWrapperStyle={{ justifyContent: "space-between" }}
-        keyExtractor={(item) => item.id}
-        renderItem={renderItem}
-        contentContainerStyle={{
-          flexGrow:1,
-        }}
-      />
-    </View>
-  );
-}
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  logo: {
-    width: 66,
-    height: 58,
-  },
-});
-
-/*
-import { PRODUITS } from '../data/listProduit';
+import { PRODUITS } from "../constants";
 import React, {useState} from 'react';
 import {
   FlatList,
@@ -68,6 +6,8 @@ import {
   StyleSheet,
   View,
   Text,
+  TextInput,
+  Button,
   TouchableOpacity,
   Image,
 } from 'react-native';
@@ -80,7 +20,7 @@ const FirstPage = ({navigation}) => {
       <FlatList 
             data={PRODUITS}
             renderItem={({item})=>(
-            <TouchableOpacity onPress={() => navigation.navigate('produitInfo', { paramProduits: item})}>
+            <TouchableOpacity onPress={() => navigation.navigate('Information', { paramProduits: item})}>
                 <View style={styles.container}>
                   <Image
                     resizeMode="contain"
@@ -145,4 +85,3 @@ const styles = StyleSheet.create({
     shadowColor: "#000029",
   }
 });
-*/
