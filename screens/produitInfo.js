@@ -48,8 +48,9 @@ const SecondPage = ({route}) => {
           {route.params.paramProduits.title}
         </Text>
         <Text style={styles.fournisseur}> {route.params.paramProduits.fournisseur}</Text>
-      <Button title="Learn More"
-  color="#841584"></Button>
+        <Button title="Trouver un distributeur"
+  color="#841584"
+  onPress={() => navigation.navigate('Distributeur')}></Button>
       </View> 
 
     </SafeAreaView>
@@ -97,7 +98,15 @@ const styles = StyleSheet.create({
     shadowColor: "#000029",
   },
   image: {
-   
     width: 200,
-    height: 220 }
+    height: 220 
+  },
+  description: {
+    color: "#003588",
+    fontSize: 16,
+    fontFamily: "HKGrotesk",
+    fontWeight: "bold",
+    alignItems: "left",
+    justifyContent: "left",
+  }
 });

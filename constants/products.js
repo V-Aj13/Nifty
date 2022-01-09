@@ -88,4 +88,4 @@ const PRODUITS = [
     description: "11",
   },
 ];
-  
+export { PRODUITS };
