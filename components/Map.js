@@ -7,7 +7,7 @@ import {StyleSheet,
         Text,
       TouchableWithoutFeedback,
       ActivityIndicator } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 
 // Position Initial de la carte = Mairie de Paris
@@ -21,17 +21,31 @@ const initialState = {
 const INITIAL_MARKER = [  //Liste des Markers avec leur attribues personnells
   {
     id: 1,
-    region: { latitude: -6.298295, longitude: 106.669749 },
-    title: 'EKA HOSPITAL',
-    desc: 'Telp.(021)8888800',
-    urlImg: 'https://serpongku.com/wp-content/uploads/2018/08/Eka-Hospital-BSD-City.jpg'
+    region: { latitude: 48.868574, longitude: 2.380539 },
+    title: 'Nifty Oberkampf',
+    desc: '89 Boulevard de Belleville',
+    Postal: '75018 Paris'
   },
   {
     id: 2,
-    region: { latitude: -6.304952, longitude: 106.684736 },
-    title: 'PASAR MODERN BSD',
-    desc: 'Telp.(021)9999800',
-    urlImg: 'https://www.pontianakpost.co.id/sites/default/files/styles/large_with_watermark/public/field/image/Ilustrasi_1.jpg?itok=jY1bljNH'
+    region: { latitude: 48.868574, longitude:  2.400539 },
+    title: 'Test 1',
+    desc: 'La rue du Test 1',
+    Postal: '75018 Paris'
+  },
+  {
+    id: 3,
+    region: { latitude: 48.82548, longitude:  2.37568 },
+    title: 'Test 3',
+    desc: 'La rue du Test 3',
+    Postal: '75018 Paris'
+  },
+  {
+    id: 4,
+    region: { latitude: 48.90548, longitude:  2.40568 },
+    title: 'Test 4',
+    desc: 'La rue du Test 4',
+    Postal: '75018 Paris'
   },
 ];
 
@@ -100,24 +114,29 @@ const renderDetailMarker = () => (        //Affiche la balise d'information
   <View                                   //Vue general
     style={{
       position:'absolute',
-      bottom:225,
+      bottom:153,
       paddingLeft: 5,
       paddingRight: 5,
-      width: width -20,
+      left: 24,
+      right: 24,
       flexDirection:'row',
-      backgroundColor:'#E1F5FE'
+      backgroundColor:'#FFFFFF',
+      height: (154/854)*height,
+      borderRadius: 16,
+      shadowRadius: 3,
+      shadowOpacity: 10,
+      shadowColor: "#000029",
     }}
   >
-    <Image
-      source={{ uri: marker['urlImg']}}
-      resizeMode="cover"
-      style={{ width: 100, height: 90 }}
-    />
     <View                                                                 //Vue du texte
-      style={{ flex:1, paddingLeft: 5, flexDirection:'column'}}
+      style={{ flex:1, paddingLeft: 17, flexDirection:'column',}}
     >
-      <Text style={{ fontWeight: 'bold' }}>{ marker['title'] }</Text>
-      <Text allowFontScaling={false}>{ marker['desc'] }</Text>
+      <Text style={{fontSize: (28/854)*height, paddingTop: (22/854)*height }}>{ marker['title'] }</Text>
+      <Text style={styles.Text} allowFontScaling={false}>{ marker['desc'] }</Text>
+      <Text style={styles.Text} allowFontScaling={false}>{ marker['Postal'] }</Text>
+      <TouchableOpacity>
+        <Text style={styles.Text, {color: '#D62C2C', textAlign: "center"}}>Signaler un Problème</Text>
+    </TouchableOpacity>
     </View>
   </View>
 )
@@ -168,7 +187,9 @@ const styles = StyleSheet.create({                         //Balise de style "st
   map: {
     height
   },
-
+  Text: {
+    fontSize: (19/854)*height,
+  },
   card: {
     backgroundColor: '#fff',
     height: 120,

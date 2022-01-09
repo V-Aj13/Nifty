@@ -26,13 +26,13 @@ const FirstPage = ({navigation}) => {
                     resizeMode="contain"
                     source={{ uri: item.prodImage }}
                     style={{
-                      width: 200,
-                      height: 200
+                      width: 50,
+                      height: 75
                      }}
                   />
                   <Text style={styles.title}>{item.title}</Text>
                   <Text style={styles.fournisseur}>{item.fournisseur}</Text>
-                  <Text>{item.prix}</Text>
+                  <Text style={styles.prix}>{item.prix}</Text>
                 </View>
             </TouchableOpacity>
             )}
@@ -51,34 +51,36 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "HKGrotesk",
     fontWeight: "normal",
-    alignItems: "flex-end",
-    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
   },
   title: {
     color: "#003588",
     fontSize: 16,
     fontFamily: "HKGrotesk",
     fontWeight: "bold",
-    alignItems: "flex-end",
-    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
   },
   prix: {
     color: "#003588",
     fontSize: 28,
     fontFamily: "HKGrotesk",
     fontWeight: "bold",
-    alignItems: "flex-end",
-    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
   },
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     flex: 1,
     height: 250,
+    width: 160,
     backgroundColor: "#FFFFFF",
     marginHorizontal: 2,
     borderRadius: 16,
-    marginBottom: 35,
+    marginTop: 17,
+    marginLeft: 15,
     padding: 30,
     shadowOpacity: 10,
     shadowRadius: 3,

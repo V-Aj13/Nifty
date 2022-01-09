@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, Image,Button} from 'react-native';
  
-const SecondPage = ({route}) => {
+const SecondPage = ({route, navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
@@ -10,13 +10,14 @@ const SecondPage = ({route}) => {
           source={{ uri: route.params.paramProduits.prodImage }}
           style={styles.image}
         />
-        <Text
-          style={styles.title}>
-          {route.params.paramProduits.title}
-        </Text>
+
+        <Text style={styles.title}> {route.params.paramProduits.title}</Text>
         <Text style={styles.fournisseur}> {route.params.paramProduits.fournisseur}</Text>
-      <Button title="Learn More"
-  color="#841584"></Button>
+        <Text style={styles.description}> {route.params.paramProduits.description}</Text>
+        
+      <Button title="Trouver un distributeur"
+              color="#841584"
+              onPress={() => navigation.navigate('Distributeur')}></Button>
       </View> 
 
     </SafeAreaView>
