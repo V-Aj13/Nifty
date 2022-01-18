@@ -1,23 +1,26 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, Image,Button} from 'react-native';
- 
+import {SafeAreaView, StyleSheet, View, Text, Image,Button, TouchableOpacity} from 'react-native';
+
+
 const SecondPage = ({route, navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
+        <TouchableOpacity onPress={() => navigation.navigate('ProduitImage')}>
         <Image
           resizeMode="contain"
           source={{ uri: route.params.paramProduits.prodImage }}
           style={styles.image}
         />
+        </TouchableOpacity>
 
         <Text style={styles.title}> {route.params.paramProduits.title}</Text>
         <Text style={styles.fournisseur}> {route.params.paramProduits.fournisseur}</Text>
         <Text style={styles.description}> {route.params.paramProduits.description}</Text>
         
       <Button title="Trouver un distributeur"
-              color="#841584"
-              onPress={() => navigation.navigate('Distributeur')}></Button>
+  color="#841584"
+  onPress={() => navigation.navigate('Distributeur')}></Button>
       </View> 
 
     </SafeAreaView>
